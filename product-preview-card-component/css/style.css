@@ -16,6 +16,7 @@ html {
 img {
   max-inline-size: 100%;
   block-size: auto;
+  height: 100%;
 }
 
 /* Variables */
@@ -57,8 +58,10 @@ body {
 .card {
   background: var(--color-white);
   border-radius: 10px;
+  box-shadow: 5px 5px 20px hsla(227.6, 11.8%, 48%, 0.2);
   font-size: 1rem;
   font-family: var(--font-1);
+  margin: 1.8em 1em;
 }
 
 /* Mobile breakpoint */
@@ -67,8 +70,7 @@ body {
     font-size: var(--font-size-mobile);
   }
   .card {
-    max-width: 25em;
-    margin: 1.8em 1em;
+    max-width: 24.643em;
     padding-block-end: 2em;
   }
 }
@@ -89,13 +91,14 @@ body {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 2px;
-  margin-block-start: 1.8em;
+  margin-block-start: 2em;
   text-transform: uppercase;
 }
 
 .card-copy .card-title {
   color: var(--color-very-dark-blue);
   font-family: var(--font-2);
+  font-weight: var(--fw-bold);
   font-size: 2.2rem;
   line-height: 1;
   margin-block-start: 0.4em;
@@ -104,13 +107,13 @@ body {
 .card-copy .card-description {
   color: var(--color-dark-grayish-blue);
   line-height: 1.5;
-  margin-block-start: 1em;
+  margin-block-start: 1.2em;
 }
 
 .card-price {
-  margin-block-start: 1em;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-block-start: 1.2em;
 }
 
 .card-price .new-price {
@@ -131,13 +134,66 @@ body {
   background-color: var(--color-dark-cyan);
   border-radius: 8px;
   color: var(--color-white);
-  display: block;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: var(--fw-bold);
   margin-block-start: 1.6em;
-  padding-block: 1em;
-  text-align: center;
+  padding-block: 0.875em;
 }
+
+.card-button:active {
+  background-color: hsl(158, 36%, 20%) ;
+}
+
 
 .card-button .cart-icon {
   margin-inline-end: 0.5em;
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 600px) {
+  :root {
+    font-size: var(--font-size-desktop);
+  }
+
+  body {
+    align-items: center;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    max-width: 37.5em;
+  }
+
+  /* .card > * {
+    margin-block: 0;
+  } */
+
+  picture {
+    grid-row: 1 / 4;
+  }
+
+  .card-image {
+    display: block;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-copy .card-description {
+    font-size: var(--font-size-mobile);
+  }
+
+  .card-price {
+    grid-column-start: 2;
+  }
+
+  .card-button {
+    grid-column-start: 2;
+    margin-block-end: 2em;
+  }
 }
