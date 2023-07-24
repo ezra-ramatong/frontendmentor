@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Variables */
+:root {
+  --color-dark-cyan: hsl(158, 36%, 37%);  
+  --color-cream: hsl(30, 38%, 92%);
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-size: 0.875em;
+  --font-1: 'Montserrat', sans-serif;
+  --font-2: 'Fraunces', serif;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+}
+
+/* Device widths */
+/* 1440px  Desktop & 375px Mobile */
+
+body {
+  background-color: var(--color-cream);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* .card {
+  background: lightblue;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card-copy .card-description {
+  width: 0;
+  max-width: 100%;
+} */
+
+.card {
+  background: var(--color-white);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font-1);
+}
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: var(--font-size);
+  }
+  .card {
+    max-width: 25em;
+    margin: 1.8em 1em;
+    padding-block-end: 2em;
+  }
+}
+
+.card-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-copy,
+.card-price,
+.card-button {
+  margin-inline: 2em;
+}
+
+.card-copy .card-subtitle {
+  color: var(--color-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-block-start: 1.8em;
+  text-transform: uppercase;
+}
+
+.card-copy .card-title {
+  color: var(--color-very-dark-blue);
+  font-family: var(--font-2);
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-block-start: 0.4em;
+}
+
+.card-copy .card-description {
+  color: var(--color-dark-grayish-blue);
+  line-height: 1.5;
+  margin-block-start: 1em;
+}
+
+.card-price {
+  margin-block-start: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.card-price .new-price {
+  color: var(--color-dark-cyan);
+  font-family: var(--font-2);
+  font-size: 2.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.card-price .old-price {
+  color: var(--color-dark-grayish-blue);
+  font-size: 1rem;
+  margin-inline-start: 2em;
+  text-decoration: line-through;
+}
+
+.card-button {
+  background-color: var(--color-dark-cyan);
+  border-radius: 8px;
+  color: var(--color-white);
+  display: block;
+  font-weight: var(--fw-bold);
+  margin-block-start: 1.6em;
+  padding-block: 1em;
+  text-align: center;
+}
+
+.card-button .cart-icon {
+  margin-inline-end: 0.5em;
+}
