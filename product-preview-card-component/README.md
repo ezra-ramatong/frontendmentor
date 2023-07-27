@@ -9,4 +9,4 @@
     - Flexbox
     - Grid
 
-[Live preview](https://ez-prod-prev-card-comp.netlify.app)
+[Live preview](https://ez-prod-prev-card-comp.netlify.app){:target="_blank"}
