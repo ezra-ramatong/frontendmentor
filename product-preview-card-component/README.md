@@ -9,4 +9,4 @@
     - Flexbox
     - Grid
 
-[Live preview](https://ez-prod-prev-card-comp.netlify.app) <kbd>Ctrl</kbd> + click to open in new tab
+[Live preview](https://ez-prod-prev-card-comp.netlify.app) - <kbd>Ctrl</kbd> + Click (Open in new tab)
