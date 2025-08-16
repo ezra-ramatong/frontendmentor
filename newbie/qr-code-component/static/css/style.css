@@ -1,0 +1,110 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Tokens */
+:root {
+
+  /* Primitives */
+  --font-step-0: 15px;
+  --font-step-1: 22px;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --space-s: 1em;
+  --space-m: 1.4em;
+
+  /* Color */
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+
+  /* Typography */
+
+  /* Semantic*/
+  --font-size-body: var(--font-step-0);
+  --font-size-heading: var(--font-step-1);
+  --font-weight-body: var(--font-weight-400);
+  --font-weight-heading: var(--font-weight-700);
+  --font-family-primary: "Outfit", sans-serif;
+
+  /* Spacing */
+  --flow-space-s: var(--space-s);
+}
+
+/* Base */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-slate-300);
+}
