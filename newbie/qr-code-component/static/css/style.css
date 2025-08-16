@@ -20,7 +20,6 @@
 }
 
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -70,35 +69,45 @@ h6 {
 
 /* Tokens */
 :root {
-
   /* Primitives */
-  --font-step-0: 15px;
-  --font-step-1: 22px;
-  --font-weight-400: 400;
-  --font-weight-700: 700;
-  --space-s: 1em;
-  --space-m: 1.4em;
-
-  /* Color */
   --color-white: hsl(0, 0%, 100%);
   --color-slate-300: hsl(212, 45%, 89%);
   --color-slate-500: hsl(216, 15%, 48%);
   --color-slate-900: hsl(218, 44%, 22%);
 
-  /* Typography */
+  --text-preset-1: 15px;
+  --text-preset-2: 22px;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --line-height-s: 120%;
+  --line-height-m: 140%;
+  --letter-spacing: 0.2px;
 
-  /* Semantic*/
-  --font-size-body: var(--font-step-0);
-  --font-size-heading: var(--font-step-1);
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+
+  --radius-100: 10px;
+  --radius-200: 20px;
+
+  /* Semantic */
+  --card-shadow: 0 25px 25px hsla(0, 0%, 0%, 4.77%);
+
+  --font-family-primary: "Outfit", sans-serif;
+  --font-size-body: var(--text-preset-1);
+  --font-size-heading: var(--text-preset-2);
   --font-weight-body: var(--font-weight-400);
   --font-weight-heading: var(--font-weight-700);
-  --font-family-primary: "Outfit", sans-serif;
+  --line-height-body: var(--line-height-m);
+  --line-height-heading: var(--line-height-s);
 
-  /* Spacing */
-  --flow-space-s: var(--space-s);
+  --padding-card: var(--spacing-200);
+
+  --radius-image: var(--radius-100);
+  --radius-card: var(--radius-200);
 }
 
-/* Base */
+/* Composition */
 
 html,
 body {
@@ -107,4 +116,70 @@ body {
 
 body {
   background-color: var(--color-slate-300);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-body);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h2 {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+}
+
+p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing);
+}
+
+/* Block */
+
+.card {
+  background-color: var(--color-white);
+  width: 320px;
+  height: 499px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+  padding: var(--padding-card);
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+/* Utilities*/
+
+.wrapper {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0 var(--spacing-200);
+}
+
+.flow > * + * {
+  margin-top: var(--spacing-200);
+}
+
+.prose-wrapper {
+  margin-top: var(--spacing-300);
+  padding-inline: var(--spacing-200);
+}
+
+.perfect-centering {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-body {
+  color: var(--color-slate-500);
+}
+
+.color-heading {
+  color: var(--color-slate-900);
 }
