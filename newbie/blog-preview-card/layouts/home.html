@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    {{ partial "css.html" }}
+  </head>
+  <body>
+    <main>
+      <div class="l-cover align:center">
+        <article class="card l-cover__centered l-stack l-stack--large">
+          <img
+            class="card__illustration"
+            src="images/illustration-article.svg"
+            height="200"
+          />
+          <div class="card__content l-stack">
+            <header class="l-stack">
+              <span class="card__category chip">Learning</span>
+              <span>
+                Published
+                <time datetime="2023-12-21">21 Dec 2023</time>
+              </span>
+              <h2>HTML &amp; CSS foundations</h2>
+            </header>
+            <p>
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+          <footer>
+            <div class="card__author l-cluster align:center">
+              <img src="images/image-avatar.webp" alt="Greg Hooper's avatar" />
+              <span>Greg Hooper</span>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

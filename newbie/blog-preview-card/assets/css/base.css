@@ -1,0 +1,39 @@
+@layer base {
+  body {
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-default);
+    line-height: var(--line-height);
+  }
+
+  h2 {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-heading);
+  }
+
+  span {
+    font-size: var(--font-size-xs);
+  }
+
+  p {
+    color: var(--color-text);
+  }
+
+  @media (min-width: 1440px) {
+    :root {
+      --space-150: 16px;
+    }
+    body {
+      font-size: var(--font-size-m);
+    }
+
+    h2 {
+      font-size: var(--font-size-xl);
+    }
+
+    span {
+      font-size: var(--font-size-s);
+    }
+  }
+}

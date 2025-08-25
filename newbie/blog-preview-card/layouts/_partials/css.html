@@ -1,0 +1,4 @@
+{{ $opts := dict "inlineImports" true }}
+{{ with resources.Get "css/index.css" | postCSS $opts }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }}

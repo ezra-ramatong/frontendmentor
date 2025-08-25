@@ -1,0 +1,8 @@
+@layer components {
+  .chip {
+    background-color: var(--color-background);
+    padding: var(--space-050, 4px) var(--space-150, 12px);
+    max-width: fit-content;
+    border-radius: var(--border-radius-s);
+  }
+}

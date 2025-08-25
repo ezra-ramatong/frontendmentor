@@ -1,0 +1,28 @@
+@layer components {
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-l);
+    box-shadow: 8px 8px 0 hsl(0, 0%, 0%);
+    padding: var(--space-300, 24px);
+    max-inline-size: 384px;
+  }
+
+  .card__category {
+    font-weight: var(--font-weight-heading);
+  }
+
+  .card__illustration {
+    border-radius: var(--border-radius-m);
+    object-fit: cover;
+  }
+
+  .card__author img {
+    width: var(--size-icon);
+  }
+
+  .card__author span {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-heading);
+  }
+}
